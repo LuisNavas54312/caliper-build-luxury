@@ -20,8 +20,11 @@ const Index = () => {
       </nav>
 
       <HeroSection />
+      <div className="h-px bg-border" />
       <AboutSection />
+      <div className="h-px bg-border" />
       <CapabilitiesSection />
+      <div className="h-px bg-border" />
       <ContactSection />
 
       {/* Footer */}

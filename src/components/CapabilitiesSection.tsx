@@ -35,13 +35,13 @@ const CapabilitiesSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <p className="font-mono text-xs tracking-[0.3em] uppercase text-concrete-light mb-6">
+          <p className="font-mono text-[11px] tracking-[0.45em] uppercase text-concrete-light mb-6">
             02 — Core Capabilities
           </p>
           <div className="w-12 h-px bg-concrete mb-16" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border">
+        <div className="grid grid-cols-1 md:grid-cols-3 divide-x divide-y divide-border border border-border">
           {capabilities.map((cap, index) => (
             <motion.div
               key={cap.title}

@@ -4,10 +4,15 @@ import { ArrowRight } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden">
-      {/* Grid overlay */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
+      {/* Architectural grid overlay */}
+      <div className="absolute inset-0 opacity-[0.06]" style={{
         backgroundImage: `linear-gradient(hsl(0 0% 96%) 1px, transparent 1px), linear-gradient(90deg, hsl(0 0% 96%) 1px, transparent 1px)`,
-        backgroundSize: '80px 80px'
+        backgroundSize: '60px 60px'
+      }} />
+      {/* Concrete noise texture */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E")`,
+        backgroundSize: '128px 128px'
       }} />
 
       {/* Horizontal rule accent */}
@@ -20,7 +25,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
         <motion.p
-          className="font-mono text-xs tracking-[0.3em] uppercase text-concrete-light mb-8"
+          className="font-mono text-[11px] tracking-[0.45em] uppercase text-concrete-light mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -57,7 +62,7 @@ const HeroSection = () => {
         >
           <a
             href="#contact"
-            className="group inline-flex items-center gap-3 border border-foreground px-8 py-4 text-sm font-medium tracking-widest uppercase text-foreground transition-all duration-300 hover:bg-foreground hover:text-background"
+            className="group inline-flex items-center gap-3 border border-foreground bg-foreground text-background px-8 py-4 text-sm font-medium tracking-widest uppercase transition-all duration-300 hover:bg-transparent hover:text-foreground"
           >
             Discuss a Project
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />

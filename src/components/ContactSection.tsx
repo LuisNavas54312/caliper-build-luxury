@@ -23,7 +23,7 @@ const ContactSection = () => {
   };
 
   const inputClasses =
-    "w-full bg-transparent border-b border-border px-0 py-4 text-sm text-foreground placeholder:text-concrete focus:outline-none focus:border-foreground transition-colors duration-300 font-light";
+    "w-full bg-secondary/40 border-b-2 border-concrete px-4 py-4 text-sm text-foreground placeholder:text-concrete-light focus:outline-none focus:border-foreground focus:bg-secondary/60 transition-all duration-300 font-light";
 
   return (
     <section id="contact" className="py-24 md:py-32 px-6 md:px-12 bg-background" ref={ref}>
@@ -33,7 +33,7 @@ const ContactSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <p className="font-mono text-xs tracking-[0.3em] uppercase text-concrete-light mb-6">
+          <p className="font-mono text-[11px] tracking-[0.45em] uppercase text-concrete-light mb-6">
             03 — Contact
           </p>
           <div className="w-12 h-px bg-concrete mb-12" />
