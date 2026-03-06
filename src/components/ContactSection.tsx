@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Send } from "lucide-react";
+import { Send, CheckCircle } from "lucide-react";
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -12,14 +12,31 @@ const ContactSection = () => {
     projectType: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setStatus("submitting");
+
+    try {
+      const res = await fetch("https://formspree.io/f/xojkqkbj", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   const inputClasses =
@@ -47,75 +64,61 @@ const ContactSection = () => {
           </p>
         </motion.div>
 
-        <motion.form
-          onSubmit={handleSubmit}
-          className="space-y-2"
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12">
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className={inputClasses}
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className={inputClasses}
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12">
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              value={formData.phone}
-              onChange={handleChange}
-              className={inputClasses}
-            />
-            <select
-              name="projectType"
-              value={formData.projectType}
-              onChange={handleChange}
-              required
-              className={`${inputClasses} appearance-none cursor-pointer`}
-            >
-              <option value="" disabled className="bg-background text-muted-foreground">
-                Project Type
-              </option>
-              <option value="commercial" className="bg-background text-foreground">Commercial</option>
-              <option value="luxury-residential" className="bg-background text-foreground">Luxury Residential</option>
-            </select>
-          </div>
-          <textarea
-            name="message"
-            placeholder="Brief Project Description"
-            value={formData.message}
-            onChange={handleChange}
-            rows={4}
-            className={`${inputClasses} resize-none`}
-          />
+        {status === "success" ? (
+          <motion.div
+            className="py-20 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <CheckCircle className="w-10 h-10 text-foreground mx-auto mb-6" strokeWidth={1} />
+            <p className="font-mono text-xs tracking-[0.45em] uppercase text-foreground">
+              Transmission Received.
+            </p>
+            <p className="font-mono text-xs tracking-[0.45em] uppercase text-concrete-light mt-2">
+              We will respond within 24 hours.
+            </p>
+          </motion.div>
+        ) : (
+          <motion.form
+            onSubmit={handleSubmit}
+            className="space-y-2"
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12">
+              <input type="text" name="name" placeholder="Full Name" value={formData.name} onChange={handleChange} required className={inputClasses} />
+              <input type="email" name="email" placeholder="Email Address" value={formData.email} onChange={handleChange} required className={inputClasses} />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12">
+              <input type="tel" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} className={inputClasses} />
+              <select name="projectType" value={formData.projectType} onChange={handleChange} required className={`${inputClasses} appearance-none cursor-pointer`}>
+                <option value="" disabled className="bg-background text-muted-foreground">Project Type</option>
+                <option value="commercial" className="bg-background text-foreground">Commercial</option>
+                <option value="luxury-residential" className="bg-background text-foreground">Luxury Residential</option>
+              </select>
+            </div>
+            <textarea name="message" placeholder="Brief Project Description" value={formData.message} onChange={handleChange} rows={4} className={`${inputClasses} resize-none`} />
 
-          <div className="pt-8">
-            <button
-              type="submit"
-              className="group inline-flex items-center gap-3 border border-foreground px-8 py-4 text-sm font-medium tracking-widest uppercase text-foreground transition-all duration-300 hover:bg-foreground hover:text-background"
-            >
-              Initiate Contact
-              <Send className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={1.5} />
-            </button>
-          </div>
-        </motion.form>
+            {status === "error" && (
+              <p className="font-mono text-xs tracking-widest uppercase text-red-400">
+                Transmission failed. Please try again.
+              </p>
+            )}
+
+            <div className="pt-8">
+              <button
+                type="submit"
+                disabled={status === "submitting"}
+                className="group inline-flex items-center gap-3 border border-foreground px-8 py-4 text-sm font-medium tracking-widest uppercase text-foreground transition-all duration-300 hover:bg-foreground hover:text-background disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                {status === "submitting" ? "Transmitting..." : "Initiate Contact"}
+                <Send className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={1.5} />
+              </button>
+            </div>
+          </motion.form>
+        )}
       </div>
     </section>
   );
