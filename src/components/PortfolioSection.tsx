@@ -12,56 +12,56 @@ interface PortfolioItem {
 
 const portfolioItems: PortfolioItem[] = [
   {
-    title: "Coral Gables Estate Shell",
-    subtitle: "12,000 SF ground-up luxury residential structure with reinforced concrete core and custom formwork.",
+    title: "Waterfront Estate Foundations",
+    subtitle: "Cast-in-place concrete foundations and post-tension slab systems engineered for Miami's coastal soil conditions. Zero-day-delay execution with full structural integrity certification.",
     sector: "residential",
-    tag: "Ground-Up",
+    tag: "Foundations",
   },
   {
-    title: "Coconut Grove Waterfront",
-    subtitle: "8,500 SF zero-to-one-hundred build on Biscayne Bay. Cast-in-place concrete with post-tension slab system.",
+    title: "Custom Architectural Shells",
+    subtitle: "Ground-up structural shells featuring cantilevered concrete balconies, steel-hybrid framing, and custom formwork for architecturally complex residential designs.",
     sector: "residential",
-    tag: "Waterfront",
+    tag: "Shell Construction",
   },
   {
-    title: "Pinecrest Modern Villa",
-    subtitle: "6,200 SF custom residential shell featuring cantilevered concrete balconies and structural steel hybrid.",
+    title: "Reinforced Concrete Cores",
+    subtitle: "High-tolerance vertical concrete cores for luxury residences requiring seismic and hurricane-grade structural performance. Architectural concrete finish standards.",
     sector: "residential",
-    tag: "Custom Shell",
+    tag: "Structural Core",
   },
   {
-    title: "Brickell Tower Podium",
-    subtitle: "Commercial structural concrete for a 42-story mixed-use tower. Foundations, columns, and elevator cores.",
+    title: "High-Rise Concrete Shells",
+    subtitle: "Large-scale structural concrete packages for mixed-use towers — foundations, columns, elevator cores, and podium structures. AIA A201 compliant with aggressive scheduling protocols.",
     sector: "commercial",
     tag: "High-Rise",
   },
   {
-    title: "Wynwood Warehouse Conversion",
-    subtitle: "Structural reinforcement and concrete rehabilitation for a 28,000 SF commercial adaptive reuse project.",
-    sector: "commercial",
-    tag: "Adaptive Reuse",
-  },
-  {
-    title: "Doral Distribution Center",
-    subtitle: "Tilt-up concrete construction for a 65,000 SF industrial distribution facility with loading dock infrastructure.",
+    title: "Industrial & Distribution Facilities",
+    subtitle: "Tilt-up concrete construction and structural reinforcement for commercial distribution centers. Strategic mobilization and critical-path delivery for large-footprint builds.",
     sector: "commercial",
     tag: "Industrial",
   },
   {
-    title: "Fisher Island Penthouse Renovation",
-    subtitle: "Full-scale gut renovation of a 4,800 SF penthouse. Bespoke Italian marble, custom millwork, and integrated smart home systems.",
-    sector: "interiors",
-    tag: "Penthouse",
+    title: "Adaptive Reuse & Rehabilitation",
+    subtitle: "Structural concrete rehabilitation and reinforcement for commercial adaptive reuse projects. Full engineering coordination with existing load-bearing systems.",
+    sector: "commercial",
+    tag: "Rehabilitation",
   },
   {
-    title: "Aventura Medical Suite TI",
-    subtitle: "Premium tenant improvement for a 3,200 SF medical office. Precision finishes and specialty MEP coordination.",
+    title: "Luxury Interior Reconfigurations",
+    subtitle: "Full-scale gut renovations providing the structural oversight that cosmetic contractors lack. Premium material integration with bespoke millwork and architectural lighting systems.",
+    sector: "interiors",
+    tag: "Gut Renovation",
+  },
+  {
+    title: "Commercial Tenant Improvements",
+    subtitle: "High-end tenant improvement build-outs with precision finishes and specialty MEP coordination. Technical finish standards that exceed conventional TI specifications.",
     sector: "interiors",
     tag: "Commercial TI",
   },
   {
-    title: "Key Biscayne Residence Remodel",
-    subtitle: "Luxury kitchen and living space transformation with imported stone surfaces, concealed appliances, and architectural lighting.",
+    title: "Estate Living Transformations",
+    subtitle: "Structural rebirth of luxury residential interiors — imported stone surfaces, concealed systems integration, and architectural detailing that demands engineering-grade execution.",
     sector: "interiors",
     tag: "Remodel",
   },
@@ -96,7 +96,7 @@ const PortfolioSection = () => {
           </p>
           <div className="w-12 h-px bg-concrete mb-12" />
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-16">
-            Selected Work
+            Capabilities Showcase
           </h2>
         </motion.div>
 
