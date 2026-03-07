@@ -102,7 +102,7 @@ const PortfolioSection = () => {
 
         {/* Filter tabs */}
         <motion.div
-          className="flex flex-row justify-center items-center gap-6 md:gap-8 w-full overflow-x-auto whitespace-nowrap mb-16 border-b border-border"
+          className="flex flex-row justify-center items-center gap-6 md:gap-8 w-full overflow-x-auto whitespace-nowrap mb-16 border-b border-border scrollbar-none [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -136,7 +136,7 @@ const PortfolioSection = () => {
                 className="group bg-background p-8 md:p-10 cursor-default transition-colors duration-500 hover:bg-accent"
               >
                 <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-[9px] tracking-[0.35em] uppercase text-concrete">
+                  <span className="font-mono text-xs md:text-sm font-bold tracking-[0.15em] uppercase text-foreground/90">
                     {item.tag}
                   </span>
                   <span className="w-2 h-2 rounded-full bg-concrete-light transition-colors duration-300 group-hover:bg-foreground" />
