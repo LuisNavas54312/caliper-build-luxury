@@ -6,19 +6,19 @@ const capabilities = [
   {
     icon: Building2,
     title: "Luxury Residential Shells",
-    description: "Ground-up structural shells for high-end residential projects, engineered with uncompromising precision and premium material specifications.",
+    description: "We specialize in the high-tolerance shell construction required for Miami's most ambitious residential designs. Structural Integrity. Zero-Day Delay. Architectural Concrete — engineered for high-net-worth projects demanding uncompromising precision.",
     label: "Residential",
   },
   {
     icon: Blocks,
     title: "Commercial Structural Concrete",
-    description: "Large-scale commercial concrete work including foundations, columns, slabs, and structural cores — delivered on schedule with zero tolerance for error.",
+    description: "Built on 5+ years of supervisory experience at Miami's leading structural firms, we deliver commercial concrete packages that meet the most rigorous critical paths. Aggressive Scheduling. AIA A201 Compliance. Strategic Mobilization.",
     label: "Commercial",
   },
   {
     icon: Gem,
     title: "Luxury Transformations & Interior Build-outs",
-    description: "Premium interior remodels for luxury residential estates and high-end commercial tenant improvements. From bespoke millwork to full-scale gut renovations, we deliver white-glove craftsmanship at the highest margin tier.",
+    description: "We manage the technical complexities of interior transformations, providing the structural oversight that cosmetic contractors lack. Structural Rebirth. Technical Finish. Premium Material Integration — for luxury estates and high-end commercial spaces.",
     label: "Interiors",
   },
   {
