@@ -102,24 +102,40 @@ const PortfolioSection = () => {
 
         {/* Filter tabs */}
         <motion.div
-          className="flex flex-wrap gap-2 mb-16 border-b border-border"
+          className="flex flex-col items-center gap-2 mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {filters.map((filter) => (
+          {/* "All Projects" on its own row */}
+          <div className="w-full flex justify-center border-b border-border">
             <button
-              key={filter.value}
-              onClick={() => setActiveSector(filter.value)}
-              className={`font-mono text-sm tracking-[0.35em] uppercase px-8 py-5 transition-all duration-300 border-b-[3px] -mb-px font-medium ${
-                activeSector === filter.value
+              onClick={() => setActiveSector("all")}
+              className={`font-mono text-sm md:text-base tracking-[0.4em] uppercase px-10 py-5 transition-all duration-300 border-b-[3px] -mb-px font-semibold ${
+                activeSector === "all"
                   ? "text-foreground border-foreground bg-accent/50"
                   : "text-muted-foreground border-transparent hover:text-foreground hover:border-concrete"
               }`}
             >
-              {filter.label}
+              All Projects
             </button>
-          ))}
+          </div>
+          {/* Three sector tabs on a single row */}
+          <div className="w-full flex justify-center border-b border-border">
+            {filters.filter(f => f.value !== "all").map((filter) => (
+              <button
+                key={filter.value}
+                onClick={() => setActiveSector(filter.value)}
+                className={`font-mono text-sm md:text-base tracking-[0.4em] uppercase px-6 md:px-10 py-5 transition-all duration-300 border-b-[3px] -mb-px font-semibold ${
+                  activeSector === filter.value
+                    ? "text-foreground border-foreground bg-accent/50"
+                    : "text-muted-foreground border-transparent hover:text-foreground hover:border-concrete"
+                }`}
+              >
+                {filter.label}
+              </button>
+            ))}
+          </div>
         </motion.div>
 
         {/* Portfolio grid */}
@@ -144,7 +160,7 @@ const PortfolioSection = () => {
                 <h3 className="text-lg font-semibold text-foreground mb-3 tracking-tight transition-colors duration-300">
                   {item.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-dim">
+                <p className="text-base leading-relaxed text-dim">
                   {item.subtitle}
                 </p>
               </motion.div>

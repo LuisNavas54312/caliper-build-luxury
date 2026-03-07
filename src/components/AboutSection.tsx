@@ -21,7 +21,7 @@ const AboutSection = () => {
         </motion.div>
 
         <motion.p
-          className="text-xl md:text-2xl lg:text-3xl leading-relaxed text-dim font-light"
+          className="text-2xl md:text-3xl lg:text-4xl leading-relaxed text-dim font-light"
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}

@@ -33,13 +33,13 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-12 px-6 md:px-12 border-t border-border">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-concrete">
+          <p className="font-mono text-xs tracking-[0.2em] uppercase text-concrete">
             © 2026 Caliper Build Partners LLC
           </p>
-          <p className="font-mono text-[9px] tracking-[0.3em] uppercase text-concrete-light/60">
+          <p className="font-mono text-[11px] tracking-[0.3em] uppercase text-concrete-light/60">
             Licensure Pending — Certified General Contractor
           </p>
-          <p className="font-mono text-[10px] tracking-[0.2em] uppercase text-concrete">
+          <p className="font-mono text-xs tracking-[0.2em] uppercase text-concrete">
             Miami, Florida
           </p>
         </div>

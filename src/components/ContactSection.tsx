@@ -59,7 +59,7 @@ const ContactSection = () => {
             <br />
             <span className="text-concrete-light">extraordinary.</span>
           </h2>
-          <p className="text-dim text-sm mb-16 max-w-md">
+          <p className="text-dim text-base md:text-lg mb-16 max-w-md">
             Reach out to discuss your next project. We respond within 24 hours.
           </p>
         </motion.div>
