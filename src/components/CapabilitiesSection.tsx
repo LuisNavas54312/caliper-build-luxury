@@ -52,9 +52,9 @@ const CapabilitiesSection = () => {
             <motion.div
               key={cap.title}
               className="group bg-surface-elevated p-8 md:p-10 transition-colors duration-500 hover:bg-accent cursor-default"
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.12 * index }}
+              transition={{ duration: 1, delay: 0.2 * index, ease: [0.25, 0.1, 0.25, 1] }}
             >
               <div className="flex items-center justify-between mb-8">
                 <cap.icon className="w-6 h-6 text-concrete-light transition-colors duration-300 group-hover:text-foreground" strokeWidth={1.5} />
