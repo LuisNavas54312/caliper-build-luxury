@@ -25,7 +25,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 md:px-12">
         <motion.p
-          className="font-mono text-[11px] tracking-[0.45em] uppercase text-concrete-light mb-8"
+          className="font-mono text-sm tracking-[0.2em] uppercase font-medium text-concrete-light mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -47,7 +47,7 @@ const HeroSection = () => {
         </motion.h1>
 
         <motion.p
-          className="text-xl md:text-2xl text-dim max-w-2xl leading-relaxed mb-12"
+          className="text-xl leading-relaxed text-dim max-w-2xl mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}

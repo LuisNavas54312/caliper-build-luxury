@@ -40,7 +40,7 @@ const ContactSection = () => {
   };
 
   const inputClasses =
-    "w-full bg-secondary/40 border-b-2 border-concrete px-4 py-4 text-base md:text-lg text-foreground placeholder:text-concrete-light focus:outline-none focus:border-foreground focus:bg-secondary/60 transition-all duration-300 font-light";
+    "w-full bg-secondary/40 border-b-2 border-concrete px-4 py-4 text-base text-foreground placeholder:text-base placeholder:text-concrete-light focus:outline-none focus:border-foreground focus:bg-secondary/60 transition-all duration-300";
 
   return (
     <section id="contact" className="py-24 md:py-32 px-6 md:px-12 bg-background" ref={ref}>
@@ -59,7 +59,7 @@ const ContactSection = () => {
             <br />
             <span className="text-concrete-light">extraordinary.</span>
           </h2>
-          <p className="text-dim text-lg md:text-xl mb-16 max-w-md">
+          <p className="text-dim text-lg mb-16 max-w-md">
             Reach out to discuss your next project. We respond within 24 hours.
           </p>
         </motion.div>
