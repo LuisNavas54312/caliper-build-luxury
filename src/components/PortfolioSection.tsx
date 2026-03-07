@@ -102,7 +102,7 @@ const PortfolioSection = () => {
 
         {/* Filter tabs */}
         <motion.div
-          className="flex flex-wrap gap-1 mb-16 border-b border-border"
+          className="flex flex-wrap gap-2 mb-16 border-b border-border"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -111,10 +111,10 @@ const PortfolioSection = () => {
             <button
               key={filter.value}
               onClick={() => setActiveSector(filter.value)}
-              className={`font-mono text-[10px] tracking-[0.3em] uppercase px-6 py-4 transition-all duration-300 border-b-2 -mb-px ${
+              className={`font-mono text-sm tracking-[0.35em] uppercase px-8 py-5 transition-all duration-300 border-b-[3px] -mb-px font-medium ${
                 activeSector === filter.value
-                  ? "text-foreground border-foreground"
-                  : "text-concrete-light border-transparent hover:text-foreground hover:border-concrete"
+                  ? "text-foreground border-foreground bg-accent/50"
+                  : "text-muted-foreground border-transparent hover:text-foreground hover:border-concrete"
               }`}
             >
               {filter.label}
@@ -129,10 +129,10 @@ const PortfolioSection = () => {
               <motion.div
                 key={item.title}
                 layout
-                initial={{ opacity: 0, scale: 0.96 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.96 }}
-                transition={{ duration: 0.4 }}
+                initial={{ opacity: 0, y: 30, scale: 0.97 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -10, scale: 0.97 }}
+                transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
                 className="group bg-background p-8 md:p-10 cursor-default transition-colors duration-500 hover:bg-accent"
               >
                 <div className="flex items-center justify-between mb-6">
