@@ -51,7 +51,7 @@ const ContactSection = () => {
           transition={{ duration: 0.8 }}
         >
           <p className="font-mono text-[11px] tracking-[0.45em] uppercase text-concrete-light mb-6">
-            03 — Contact
+            04 — Contact
           </p>
           <div className="w-12 h-px bg-concrete mb-12" />
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">
@@ -97,6 +97,7 @@ const ContactSection = () => {
                 <option value="" disabled className="bg-background text-muted-foreground">Project Type</option>
                 <option value="commercial" className="bg-background text-foreground">Commercial</option>
                 <option value="luxury-residential" className="bg-background text-foreground">Luxury Residential</option>
+                <option value="interior-transformation" className="bg-background text-foreground">Interior Transformation</option>
               </select>
             </div>
             <textarea name="message" placeholder="Brief Project Description" value={formData.message} onChange={handleChange} rows={4} className={`${inputClasses} resize-none`} />

@@ -88,3 +88,8 @@
     border-color: hsl(var(--concrete));
   }
 }
+
+/* Hide Lovable badge for white-label experience */
+#lovable-badge {
+  display: none !important;
+}

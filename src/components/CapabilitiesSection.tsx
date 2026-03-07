@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Building2, Blocks, Monitor } from "lucide-react";
+import { Building2, Blocks, Monitor, Gem } from "lucide-react";
 
 const capabilities = [
   {
@@ -16,6 +16,12 @@ const capabilities = [
     label: "Commercial",
   },
   {
+    icon: Gem,
+    title: "Luxury Transformations & Interior Build-outs",
+    description: "Premium interior remodels for luxury residential estates and high-end commercial tenant improvements. From bespoke millwork to full-scale gut renovations, we deliver white-glove craftsmanship at the highest margin tier.",
+    label: "Interiors",
+  },
+  {
     icon: Monitor,
     title: "Tech-Enabled Project Management",
     description: "Real-time project tracking, digital reporting, and data-driven scheduling that eliminates waste and maximizes transparency for every stakeholder.",
@@ -29,7 +35,7 @@ const CapabilitiesSection = () => {
 
   return (
     <section className="py-24 md:py-32 px-6 md:px-12 bg-surface-elevated" ref={ref}>
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -41,18 +47,18 @@ const CapabilitiesSection = () => {
           <div className="w-12 h-px bg-concrete mb-16" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-x divide-y divide-border border border-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-x divide-y divide-border border border-border">
           {capabilities.map((cap, index) => (
             <motion.div
               key={cap.title}
               className="group bg-surface-elevated p-8 md:p-10 transition-colors duration-500 hover:bg-accent cursor-default"
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.15 * index }}
+              transition={{ duration: 0.6, delay: 0.12 * index }}
             >
               <div className="flex items-center justify-between mb-8">
                 <cap.icon className="w-6 h-6 text-concrete-light transition-colors duration-300 group-hover:text-foreground" strokeWidth={1.5} />
-                <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-concrete">
+                <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-concrete">
                   {cap.label}
                 </span>
               </div>
