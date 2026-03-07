@@ -65,7 +65,7 @@ const CapabilitiesSection = () => {
               <h3 className="text-lg font-semibold text-foreground mb-4 tracking-tight">
                 {cap.title}
               </h3>
-              <p className="text-base leading-relaxed text-dim">
+              <p className="text-base md:text-lg leading-relaxed text-dim">
                 {cap.description}
               </p>
             </motion.div>
