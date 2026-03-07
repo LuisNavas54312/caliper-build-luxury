@@ -56,9 +56,9 @@ const CapabilitiesSection = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1, delay: 0.2 * index, ease: [0.25, 0.1, 0.25, 1] }}
             >
-              <div className="flex items-center justify-between mb-8">
-                <cap.icon className="w-6 h-6 text-concrete-light transition-colors duration-300 group-hover:text-foreground" strokeWidth={1.5} />
-                <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-concrete">
+              <div className="flex flex-col mb-8">
+                <cap.icon className="w-10 h-10 md:w-12 md:h-12 text-foreground mb-4" strokeWidth={1.5} />
+                <span className="font-mono text-sm md:text-base font-bold tracking-[0.15em] uppercase text-foreground">
                   {cap.label}
                 </span>
               </div>
