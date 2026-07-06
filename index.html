@@ -1,34 +1,377 @@
-<!doctype html>
+<!--
+  ============================================================================
+  CALIPER BUILD PARTNERS — WEBSITE  (index.html)
+  ============================================================================
+  Your content, restyled. One file. You own it. No plugin, no monthly fee.
+
+  ── YOUR CONTACT FORM ──────────────────────────────────────────────────────
+  Wired to your existing Formspree endpoint (xojkqkbj) — submissions go to the
+  same business email as before. It's the <form> in section 04. Don't change
+  the action URL unless you switch services.
+
+  ── ADD A PORTFOLIO PHOTO ─────────────────────────────────────────────────
+  1. Put your photo in a folder next to this file:  images/projects/
+  2. Find the WORK list in the <script> below.
+  3. Set that item's "image" to your file path (e.g. images/projects/foundation.jpg).
+  Until a real photo exists, a striped "Add photo" placeholder shows instead.
+
+  ── EDIT SERVICES / TEXT ──────────────────────────────────────────────────
+  Core Capabilities live in the 02 section markup. Portfolio items live in the
+  WORK list in the <script>. Everything is plain text — edit in place.
+  ============================================================================
+-->
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>CaliperBuildPartners</title>
-    <meta name="description" content="Lovable Generated Project">
-    <meta name="author" content="Lovable" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caliper Build Partners — Structural Concrete &amp; Luxury Residential | South Florida</title>
+<meta name="description" content="Tech-enabled general contracting in South Florida — high-margin luxury residential shells and commercial structural concrete, executed to mathematical tolerance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --graphite:#17191B;
+    --concrete:#5C6066;
+    --concrete-light:#9DA1A6;
+    --paper:#ECECE9;
+    --panel:#F3F3F0;
+    --card:#FFFFFF;
+    --line:#D2D2CD;
+    --line-soft:#E0E0DB;
+    --accent:#E8B004;
+    --accent-ink:#2A2400;
+    --f-display:'Archivo', system-ui, sans-serif;
+    --f-body:'IBM Plex Sans', system-ui, sans-serif;
+    --f-mono:'IBM Plex Mono', ui-monospace, monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--f-body);background:var(--paper);color:var(--graphite);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+  .sec-mark{font-family:var(--f-mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--concrete);display:inline-flex;align-items:center;gap:10px}
+  .sec-mark::before{content:"";width:16px;height:2px;background:var(--accent);display:inline-block;flex:none}
 
-    <!-- TODO: Update og:title to match your application name -->
-    
-    
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/23adfee8-a352-4bf2-8117-63c6d896686c/id-preview-71ace6a6--042dfca6-85ed-43e0-9a44-4c9dc5e9e0d3.lovable.app-1772833033036.png">
+  /* ── Header ─────────────────────────────── */
+  header{position:sticky;top:0;z-index:50;background:rgba(236,236,233,.92);backdrop-filter:blur(8px);border-bottom:1.5px solid var(--graphite)}
+  .head-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0}
+  .brand{display:flex;align-items:center;gap:12px}
+  .mark{width:28px;height:28px;flex:none;position:relative;border:2px solid var(--graphite)}
+  .mark::before{content:"";position:absolute;left:50%;top:-2px;bottom:-2px;width:2px;background:var(--accent);transform:translateX(-50%)}
+  .brand-name{font-family:var(--f-display);font-weight:800;font-size:14px;letter-spacing:.13em;text-transform:uppercase}
+  nav.main{display:flex;align-items:center;gap:26px}
+  nav.main a{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--concrete);transition:.15s}
+  nav.main a:hover{color:var(--graphite)}
+  .btn{font-family:var(--f-display);font-weight:700;font-size:13px;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;color:var(--graphite);border:1.5px solid var(--graphite);padding:11px 18px;transition:.15s;white-space:nowrap;cursor:pointer;background:transparent}
+  .btn:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+  .btn-solid{background:var(--graphite);color:#fff}
+  .btn-solid:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  @media (max-width:720px){nav.main a{display:none}}
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/23adfee8-a352-4bf2-8117-63c6d896686c/id-preview-71ace6a6--042dfca6-85ed-43e0-9a44-4c9dc5e9e0d3.lovable.app-1772833033036.png">
-    
-  
-  
-  
-  <meta property="og:title" content="CaliperBuildPartners">
-  <meta name="twitter:title" content="CaliperBuildPartners">
-  <meta property="og:description" content="Lovable Generated Project">
-  <meta name="twitter:description" content="Lovable Generated Project">
+  /* ── Hero ───────────────────────────────── */
+  .hero{background:var(--paper);color:var(--graphite);position:relative;overflow:hidden;border-bottom:1.5px solid var(--graphite)}
+  .hero .wrap{padding-top:92px;padding-bottom:92px;position:relative;z-index:2}
+  .hero h1{font-family:var(--f-display);font-weight:900;font-size:clamp(40px,7.2vw,86px);line-height:.98;letter-spacing:-.025em;margin:18px 0 22px;max-width:16ch}
+  .hero p{font-size:clamp(16px,2vw,19px);color:var(--concrete);max-width:46ch}
+  .hero-cta{margin-top:34px;display:inline-flex}
+  .scale{position:absolute;left:0;right:0;bottom:0;display:flex;height:22px;z-index:1;opacity:.5}
+  .scale i{flex:1;border-left:1px solid var(--graphite);height:9px;align-self:flex-end}
+  .scale i:nth-child(5n+1){height:22px}
+  .grid-lines{position:absolute;inset:0;z-index:0;background-image:linear-gradient(90deg,rgba(23,25,27,.05) 1px,transparent 1px);background-size:calc(100%/12) 100%}
+
+  /* ── Firm ───────────────────────────────── */
+  section{padding:80px 0}
+  .firm-grid{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:start}
+  .firm-body{max-width:64ch}
+  .firm-body h2{font-family:var(--f-display);font-weight:800;font-size:clamp(26px,3.4vw,40px);line-height:1.08;letter-spacing:-.02em;margin:14px 0 20px}
+  .firm-body p{font-size:17px;color:var(--concrete)}
+  .firm-body b{color:var(--graphite);font-weight:600}
+  @media (max-width:760px){.firm-grid{grid-template-columns:1fr;gap:14px}}
+
+  /* ── Capabilities ───────────────────────── */
+  .cap{background:var(--panel);border-top:1.5px solid var(--graphite);border-bottom:1.5px solid var(--graphite)}
+  .cap h2{font-family:var(--f-display);font-weight:800;font-size:clamp(26px,3.4vw,40px);letter-spacing:-.02em;margin:12px 0 34px}
+  .cap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
+  .cap-card{background:var(--card);padding:32px 30px;position:relative}
+  .cap-tag{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-ink);background:var(--accent);display:inline-block;padding:4px 9px;margin-bottom:16px}
+  .cap-card h3{font-family:var(--f-display);font-weight:700;font-size:22px;letter-spacing:-.01em;margin-bottom:12px}
+  .cap-card p{font-size:15px;color:var(--concrete)}
+  @media (max-width:680px){.cap-grid{grid-template-columns:1fr}}
+
+  /* ── Portfolio / Work ───────────────────── */
+  .work h2{font-family:var(--f-display);font-weight:800;font-size:clamp(26px,3.4vw,40px);letter-spacing:-.02em;margin:12px 0 6px}
+  .work .lede{color:var(--concrete);max-width:52ch;margin-bottom:26px}
+  .filters{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-bottom:2px;padding-bottom:20px}
+  .filter-label{font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--concrete-light);margin-right:4px}
+  .chip{font-family:var(--f-mono);font-size:12.5px;letter-spacing:.03em;background:var(--card);border:1px solid var(--line);color:var(--concrete);padding:8px 13px;cursor:pointer;transition:.15s;display:inline-flex;gap:7px;align-items:center}
+  .chip:hover{border-color:var(--graphite);color:var(--graphite)}
+  .chip .count{font-size:10px;color:var(--concrete-light)}
+  .chip[aria-pressed="true"]{background:var(--graphite);border-color:var(--graphite);color:#fff}
+  .chip[aria-pressed="true"] .count{color:var(--accent)}
+  .chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
+  .card{background:var(--card);border:none;text-align:left;cursor:pointer;padding:0;display:flex;flex-direction:column;color:inherit;font-family:inherit;transition:.2s;position:relative}
+  .card:hover{background:#fff;box-shadow:0 12px 30px -20px rgba(23,25,27,.5)}
+  .card:hover .thumb img{transform:scale(1.04)}
+  .card:focus-visible{outline:2.5px solid var(--accent);outline-offset:-2px;z-index:2}
+  .thumb{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--graphite)}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+  .kick{position:absolute;left:0;bottom:0;font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;background:var(--graphite);color:#fff;padding:5px 10px}
+  .kick b{color:var(--accent);font-weight:600}
+  .card-body{padding:18px 18px 20px}
+  .proj-name{font-family:var(--f-display);font-weight:700;font-size:18px;letter-spacing:-.01em;line-height:1.15}
+  .spec{display:flex;margin-top:13px;border-top:1px solid var(--line-soft)}
+  .spec div{flex:1;padding:9px 0 2px;border-right:1px dotted var(--line)}
+  .spec div:last-child{border-right:none}
+  .spec .v{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.04em;color:var(--graphite)}
+  .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:repeating-linear-gradient(45deg,#232629 0 10px,#1c1f21 10px 20px);color:#83878c;text-align:center;padding:16px}
+  .ph svg{width:24px;height:24px;opacity:.7}
+  .ph span{font-family:var(--f-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+  .ph small{font-family:var(--f-mono);font-size:10.5px;color:#aeb2b7;max-width:85%}
+  @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.grid{grid-template-columns:1fr}}
+
+  /* ── Lightbox ───────────────────────────── */
+  .lb{position:fixed;inset:0;z-index:100;display:none;background:rgba(20,22,24,.9);backdrop-filter:blur(4px);padding:24px;overflow:auto}
+  .lb.open{display:flex;align-items:center;justify-content:center}
+  .lb-panel{background:var(--card);max-width:920px;width:100%;display:grid;grid-template-columns:1.3fr 1fr;border:1.5px solid var(--graphite)}
+  .lb-img{position:relative;background:var(--graphite);min-height:320px}
+  .lb-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .lb-info{padding:30px 28px;display:flex;flex-direction:column}
+  .lb-kick{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--concrete)}
+  .lb-kick b{color:var(--graphite)}
+  .lb-name{font-family:var(--f-display);font-weight:800;font-size:27px;line-height:1.05;letter-spacing:-.02em;margin:8px 0 15px}
+  .lb-desc{color:var(--concrete);font-size:15px}
+  .lb-spec{margin-top:auto;padding-top:20px;border-top:1px solid var(--line);display:flex;gap:16px;flex-wrap:wrap}
+  .lb-spec .v{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em}
+  .lb-close{position:absolute;top:14px;right:14px;z-index:2;width:38px;height:38px;border:1.5px solid #fff;background:rgba(20,22,24,.55);color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .lb-close:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+  @media (max-width:820px){.lb-panel{grid-template-columns:1fr}.lb-img{aspect-ratio:4/3;min-height:0}}
+
+  /* ── Contact ────────────────────────────── */
+  .contact{background:var(--panel);border-top:1.5px solid var(--graphite)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .contact h2{font-family:var(--f-display);font-weight:900;font-size:clamp(30px,4.4vw,52px);line-height:1;letter-spacing:-.025em;margin:14px 0 18px}
+  .contact .intro{color:var(--concrete);font-size:17px;max-width:34ch}
+  .contact-detail{margin-top:30px;font-family:var(--f-mono);font-size:13px;color:var(--concrete);letter-spacing:.03em;line-height:2}
+  form{display:flex;flex-direction:column;gap:14px}
+  .field label{display:block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--concrete);margin-bottom:6px}
+  .field input,.field select,.field textarea{width:100%;background:var(--card);border:1px solid var(--line);color:var(--graphite);font-family:var(--f-body);font-size:15px;padding:12px 14px;transition:.15s}
+  .field input::placeholder,.field textarea::placeholder{color:var(--concrete-light)}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(232,176,4,.15)}
+  .field textarea{resize:vertical;min-height:110px}
+  .field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%235C6066' stroke-width='2'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  form .btn-solid{border:1.5px solid var(--graphite);background:var(--graphite);color:#fff;padding:14px;font-family:var(--f-display);font-weight:700;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:.15s;margin-top:4px}
+  form .btn-solid:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+  .hp{position:absolute;left:-9999px}
+  .form-note{font-family:var(--f-mono);font-size:11px;color:var(--concrete-light)}
+  @media (max-width:820px){.contact-grid{grid-template-columns:1fr;gap:32px}.row2{grid-template-columns:1fr}}
+
+  /* ── Footer ─────────────────────────────── */
+  footer.foot{background:var(--panel);color:var(--concrete);border-top:1.5px solid var(--graphite);padding:26px 0}
+  .foot-inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-family:var(--f-mono);font-size:11.5px;letter-spacing:.04em}
+
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}.card:hover .thumb img{transform:none}}
+</style>
 </head>
+<body>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<header>
+  <div class="wrap head-inner">
+    <div class="brand"><span class="mark" aria-hidden="true"></span><span class="brand-name">Caliper Build Partners</span></div>
+    <nav class="main">
+      <a href="#firm">The Firm</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-solid" href="#contact">Request a bid</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="padding:0">
+  <div class="grid-lines" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="sec-mark">South Florida — General Contracting</p>
+    <h1>Executing architectural visions with mathematical tolerance.</h1>
+    <p>High-margin luxury residential builds and commercial structural concrete across South Florida.</p>
+    <div class="hero-cta"><a class="btn" href="#contact">Discuss a project</a></div>
+  </div>
+  <div class="scale" aria-hidden="true"></div>
+</section>
+
+<!-- 01 THE FIRM -->
+<section id="firm">
+  <div class="wrap firm-grid">
+    <p class="sec-mark">01 — The Firm</p>
+    <div class="firm-body">
+      <h2>Old-world craftsmanship, modern precision.</h2>
+      <!-- Founder name below — change "Luis Navas" here if needed. -->
+      <p>Caliper Build Partners LLC is a <b>tech-enabled general contracting firm</b> specializing in high-margin luxury residential builds and commercial structural concrete across South Florida. Founded by <b>Luis Navas</b>, we leverage extensive field experience at premier firms like L&amp;R and KNM to deliver uncompromising precision — bridging old-world craftsmanship and modern efficiency through advanced project management.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 CORE CAPABILITIES -->
+<section class="cap" id="capabilities">
+  <div class="wrap">
+    <p class="sec-mark">02 — Core Capabilities</p>
+    <h2>What we build.</h2>
+    <div class="cap-grid">
+      <div class="cap-card">
+        <span class="cap-tag">Residential</span>
+        <h3>Luxury Residential Shells</h3>
+        <p>High-tolerance shell construction for South Florida's most ambitious residential designs. Structural integrity, zero-day delay, and architectural concrete engineered for high-net-worth projects that demand uncompromising precision.</p>
+      </div>
+      <div class="cap-card">
+        <span class="cap-tag">Commercial</span>
+        <h3>Commercial Structural Concrete</h3>
+        <p>Commercial concrete packages built to the most rigorous critical paths, drawing on years of supervisory experience at South Florida's leading structural firms. Aggressive scheduling, AIA A201 compliance, strategic mobilization.</p>
+      </div>
+      <div class="cap-card">
+        <span class="cap-tag">Interiors</span>
+        <h3>Luxury Transformations &amp; Interior Build-outs</h3>
+        <p>The structural oversight cosmetic contractors lack. Structural rebirth, technical finish, and premium material integration for luxury estates and high-end commercial spaces.</p>
+      </div>
+      <div class="cap-card">
+        <span class="cap-tag">Technology</span>
+        <h3>Tech-Enabled Project Management</h3>
+        <p>Real-time project tracking, digital reporting, and data-driven scheduling that eliminates waste and maximizes transparency for every stakeholder.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 SELECTED WORK -->
+<section class="work" id="work">
+  <div class="wrap">
+    <p class="sec-mark">03 — Selected Work</p>
+    <h2>Capabilities showcase.</h2>
+    <p class="lede">Filter by the type of work. Photos drop into each slot as projects complete.</p>
+    <div class="filters" id="filters"><span class="filter-label">Type of work</span></div>
+    <div class="grid" id="grid" role="list"></div>
+  </div>
+</section>
+
+<!-- 04 CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="sec-mark">04 — Contact</p>
+      <h2>Let's build something extraordinary.</h2>
+      <p class="intro">Reach out to discuss your next project. We respond within 24 hours.</p>
+      <div class="contact-detail">
+        CALIPER BUILD PARTNERS LLC<br>
+        SOUTH FLORIDA<br>
+        LICENSURE PENDING — CGC
+      </div>
+    </div>
+
+    <!-- Formspree — submissions go to your business email. Keep this action URL. -->
+    <form action="https://formspree.io/f/xojkqkbj" method="POST">
+      <input type="hidden" name="_subject" value="New project inquiry — Caliper Build Partners">
+      <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="field"><label for="name">Full name</label><input id="name" type="text" name="name" placeholder="Full name" required></div>
+      <div class="row2">
+        <div class="field"><label for="email">Email</label><input id="email" type="email" name="email" placeholder="Email address" required></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" type="tel" name="phone" placeholder="Phone number"></div>
+      </div>
+      <div class="field">
+        <label for="projectType">Project type</label>
+        <select id="projectType" name="projectType">
+          <option>Commercial</option>
+          <option>Luxury Residential</option>
+          <option>Interior Transformation</option>
+        </select>
+      </div>
+      <div class="field"><label for="message">Project description</label><textarea id="message" name="message" placeholder="Brief project description" required></textarea></div>
+      <button class="btn-solid" type="submit">Initiate contact</button>
+      <p class="form-note">Sends straight to our inbox via Formspree.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <span>© 2026 Caliper Build Partners LLC</span>
+    <span>Licensure pending — Certified General Contractor</span>
+    <span>South Florida</span>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-labelledby="lbName">
+  <div class="lb-panel">
+    <div class="lb-img"><button class="lb-close" id="lbClose" aria-label="Close">&times;</button><div id="lbImgSlot"></div></div>
+    <div class="lb-info">
+      <p class="lb-kick" id="lbKick"></p>
+      <h2 class="lb-name" id="lbName"></h2>
+      <p class="lb-desc" id="lbDesc"></p>
+      <div class="lb-spec" id="lbSpec"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ==========================================================================
+   TYPES OF WORK — matches your existing portfolio filters.
+   ========================================================================== */
+const CATEGORIES = ["Ground-Up Residential","Commercial & Concrete","Interior Transformations"];
+
+/* ==========================================================================
+   WORK — your 9 portfolio items, kept as-is. Add "image" paths as photos
+   come in (images/projects/…). Copy a block to add a real completed project.
+   ========================================================================== */
+const WORK = [
+  {kick:"Foundations", name:"Waterfront Estate Foundations", category:"Ground-Up Residential", image:"images/projects/foundations.jpg",
+   specs:["Cast-in-place","Post-tension","Coastal soil"],
+   desc:"Cast-in-place concrete foundations and post-tension slab systems engineered for South Florida's coastal soil conditions. Zero-day-delay execution with full structural integrity certification."},
+  {kick:"Shell Construction", name:"Custom Architectural Shells", category:"Ground-Up Residential", image:"images/projects/shells.jpg",
+   specs:["Cantilever","Steel-hybrid","Custom formwork"],
+   desc:"Ground-up structural shells featuring cantilevered concrete balconies, steel-hybrid framing, and custom formwork for architecturally complex residential designs."},
+  {kick:"Structural Core", name:"Reinforced Concrete Cores", category:"Ground-Up Residential", image:"images/projects/cores.jpg",
+   specs:["Hurricane-grade","High-tolerance","Arch. finish"],
+   desc:"High-tolerance vertical concrete cores for luxury residences requiring seismic and hurricane-grade structural performance, held to architectural concrete finish standards."},
+  {kick:"High-Rise", name:"High-Rise Concrete Shells", category:"Commercial & Concrete", image:"images/projects/highrise.jpg",
+   specs:["Mixed-use","Podium + cores","AIA A201"],
+   desc:"Large-scale structural concrete packages for mixed-use towers — foundations, columns, elevator cores, and podium structures. AIA A201 compliant with aggressive scheduling protocols."},
+  {kick:"Industrial", name:"Industrial & Distribution Facilities", category:"Commercial & Concrete", image:"images/projects/industrial.jpg",
+   specs:["Tilt-up","Large-footprint","Critical-path"],
+   desc:"Tilt-up concrete construction and structural reinforcement for commercial distribution centers. Strategic mobilization and critical-path delivery for large-footprint builds."},
+  {kick:"Rehabilitation", name:"Adaptive Reuse & Rehabilitation", category:"Commercial & Concrete", image:"images/projects/rehab.jpg",
+   specs:["Reinforcement","Load-bearing","Full eng. coord"],
+   desc:"Structural concrete rehabilitation and reinforcement for commercial adaptive reuse projects, with full engineering coordination against existing load-bearing systems."},
+  {kick:"Gut Renovation", name:"Luxury Interior Reconfigurations", category:"Interior Transformations", image:"images/projects/gut-reno.jpg",
+   specs:["Structural","Bespoke millwork","Arch. lighting"],
+   desc:"Full-scale gut renovations providing the structural oversight cosmetic contractors lack. Premium material integration with bespoke millwork and architectural lighting systems."},
+  {kick:"Commercial TI", name:"Commercial Tenant Improvements", category:"Interior Transformations", image:"images/projects/commercial-ti.jpg",
+   specs:["TI build-out","MEP coord","Precision finish"],
+   desc:"High-end tenant improvement build-outs with precision finishes and specialty MEP coordination — technical finish standards that exceed conventional TI specifications."},
+  {kick:"Remodel", name:"Estate Living Transformations", category:"Interior Transformations", image:"images/projects/estate-remodel.jpg",
+   specs:["Stone surfaces","Concealed systems","Detailing"],
+   desc:"Structural rebirth of luxury residential interiors — imported stone surfaces, concealed systems integration, and architectural detailing that demands engineering-grade execution."}
+];
+
+/* ── engine ── */
+const grid=document.getElementById('grid'), filterBar=document.getElementById('filters');
+let active="All";
+const ph=(n)=>`<div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="8.5" cy="10" r="1.5"/><path d="M4 17l4.5-4 3 2.5L15 12l5 5"/></svg><span>Add photo</span><small>images/projects/… · ${n}</small></div>`;
+const imgOrPh=(p)=>`<img src="${p.image}" alt="${p.name}" onerror="this.style.display='none';this.insertAdjacentHTML('afterend',this.dataset.ph)" data-ph="${ph(p.name).replace(/"/g,'&quot;')}">`;
+function counts(){const c={All:WORK.length};CATEGORIES.forEach(k=>c[k]=WORK.filter(w=>w.category===k).length);return c;}
+function renderFilters(){const c=counts();["All",...CATEGORIES].forEach(cat=>{if(cat!=="All"&&!c[cat])return;const b=document.createElement('button');b.className='chip';b.dataset.cat=cat;b.setAttribute('aria-pressed',cat===active);b.innerHTML=`${cat} <span class="count">${c[cat]}</span>`;b.onclick=()=>{active=cat;update();};filterBar.appendChild(b);});}
+function render(){const list=active==="All"?WORK:WORK.filter(w=>w.category===active);grid.innerHTML=list.map(p=>`<button class="card" role="listitem" data-i="${WORK.indexOf(p)}"><div class="thumb">${imgOrPh(p)}<span class="kick"><b>▸</b> ${p.kick}</span></div><div class="card-body"><div class="proj-name">${p.name}</div><div class="spec">${p.specs.map(s=>`<div><span class="v">${s}</span></div>`).join('')}</div></div></button>`).join('');grid.querySelectorAll('.card').forEach(c=>c.onclick=()=>openLB(WORK[c.dataset.i]));}
+function update(){filterBar.querySelectorAll('.chip').forEach(ch=>ch.setAttribute('aria-pressed',ch.dataset.cat===active));render();}
+const lb=document.getElementById('lb');let lastFocus=null;
+function openLB(p){lastFocus=document.activeElement;document.getElementById('lbKick').innerHTML=`Type of work — <b>${p.category}</b>`;document.getElementById('lbName').textContent=p.name;document.getElementById('lbDesc').textContent=p.desc;document.getElementById('lbImgSlot').innerHTML=imgOrPh(p);document.getElementById('lbSpec').innerHTML=p.specs.map(s=>`<span class="v">${s}</span>`).join('');lb.classList.add('open');document.body.style.overflow='hidden';document.getElementById('lbClose').focus();}
+function closeLB(){lb.classList.remove('open');document.body.style.overflow='';if(lastFocus)lastFocus.focus();}
+document.getElementById('lbClose').onclick=closeLB;
+lb.onclick=e=>{if(e.target===lb)closeLB();};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&lb.classList.contains('open'))closeLB();});
+renderFilters();render();
+</script>
+</body>
 </html>
